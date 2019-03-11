@@ -19,8 +19,8 @@ function showCommits(element) {
     });
 }
 
-function displayRepositories(data) {
-    return data.items.map(function (result) {
+function displayRepositories() {
+    return data.items.map(function (resultat) {
         let search =
             `<div>
                  <h2><a href="${result.html_url}">${result.name}</a></h2>
