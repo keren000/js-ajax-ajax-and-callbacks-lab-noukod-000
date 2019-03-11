@@ -18,15 +18,20 @@
       }
     </style>
   </head>
+  
   <body>
     <main id="main">
       <div id="errors"></div>
     </main>
+    
     <div class="flexbox-container">
       <div>
         <h3>Repositories</h3>
         <div id="results"></div>
+        <input type="text" id="searchTerms">
+        <a href="#" onclick="searchRepositories()">Search Repositories</a>
       </div>
+
       <div>
         <h3>Details</h3>
         <div id="details"></div>
