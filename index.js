@@ -23,18 +23,18 @@ function displayRepositories() {
     return data.items.map(function (resultat) {
         let search =
             `<div>
-                 <h2><a href="${result.html_url}">${result.name}</a></h2>
-                 <img src="${result.owner.avatar_url}"><br>
-                 <a href="#" data-repository="${result.name}" data-owner="${result.owner.login}" onclick="showCommits(this)">Show Commits</a><br>
-                 <p>Score: ${result.score}</p>
+                 <h2><a href="${resultat.html_url}">${resultat.name}</a></h2>
+                 <img src="${resultat.owner.avatar_url}"><br>
+                 <a href="#" data-repository="${resultat.name}" data-owner="${resultat.owner.login}" onclick="showCommits(this)">Show Commits</a><br>
+                 <p>Score: ${resultat.score}</p>
              </div>`;
         return search;
     });
 }
 
 function displayCommits(data) {
-    let result = data.map(function (commit) {
+    let resultat = data.map(function (commit) {
         return `<li>${commit.sha}<br>${commit.commit.message}</li>`;
     }).join('');
-    return `<ul>${result}</ul>`;
+    return `<ul>${resultat}</ul>`;
 }
